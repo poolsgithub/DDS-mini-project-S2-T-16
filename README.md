@@ -3,7 +3,7 @@
 <!-- First Section -->
 ## Team Details
 <details> 
-  <summary>click to view</summary>
+  <summary>Click to view</summary>
 
   > Semester: 3rd Sem B. Tech. CSE
 
@@ -22,7 +22,7 @@
 <!-- Second Section -->
 ## Abstract
 <details>
-  <summary>click to view</summary>
+  <summary>Click to view</summary>
   
  ### Motivation
  
@@ -61,7 +61,7 @@ criteria such as urgency, resource intensity or deadline.
 
 <details>
 
-<summary>click to view</summary>
+<summary>Click to view</summary>
 
 </details>
 
@@ -69,7 +69,7 @@ criteria such as urgency, resource intensity or deadline.
 
 <details>
 
-<summary>click to view</summary>
+<summary>Click to view</summary>
   
 </details>
 
@@ -77,9 +77,15 @@ criteria such as urgency, resource intensity or deadline.
 
 <details>
 
-<summary>click to view</summary>
+<summary>Click to view</summary>
   
 ### Test bench File
 
 </details>
 
+## References
+<details>
+
+  <summary>Click to view</summary>
+  
+</details>
