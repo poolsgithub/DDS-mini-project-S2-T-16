@@ -1,10 +1,9 @@
-# DDS-mini-project-S2-T-16
 # DYNAMIC LOAD BALANCING IN COMPUTING
 
 <!-- First Section -->
 ## Team Details
-<details>
-  <summary>Detail</summary>
+<details> 
+  <summary>click to view</summary>
 
   > Semester: 3rd Sem B. Tech. CSE
 
@@ -23,6 +22,7 @@
 <!-- Second Section -->
 ## Abstract
 <details>
+  <summary>click to view</summary>
   
  ### Motivation
  
@@ -57,20 +57,29 @@ criteria such as urgency, resource intensity or deadline.
 </details>
 
 
-## Block Diagram
+## Working
 
+<details>
 
+<summary>click to view</summary>
+
+</details>
 
 ## Logisim Circuit Diagram
+
+<details>
+
+<summary>click to view</summary>
+  
+</details>
 
 ## Verilog Code
 
 <details>
+
+<summary>click to view</summary>
   
 ### Test bench File
+
 </details>
-
-
- ## References
- 
 
