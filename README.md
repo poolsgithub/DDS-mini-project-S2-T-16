@@ -81,7 +81,7 @@ criteria such as urgency, resource intensity or deadline.
 
 ### flowchart
 
-
+![image](https://github.com/user-attachments/assets/365aae2b-4dca-4482-81ff-16936b251e4b)
 
 </details>
 
