@@ -63,6 +63,7 @@ criteria such as urgency, resource intensity or deadline.
 ## Functional Block Diagram
 <details>
   <summary>Detail</summary>  
+
 ![block drawio](https://github.com/user-attachments/assets/13779907-88a6-47d2-bc06-8bb2979af70f)
 
 
