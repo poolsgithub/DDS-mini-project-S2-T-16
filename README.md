@@ -3,7 +3,7 @@
 <!-- First Section -->
 ## Team Details
 <details> 
-  <summary>Click to view</summary>
+  <summary>Detail</summary>
 
   > Semester: 3rd Sem B. Tech. CSE
 
@@ -22,7 +22,7 @@
 <!-- Second Section -->
 ## Abstract
 <details>
-  <summary>Click to view</summary>
+  <summary>Detail</summary>
   
  ### Motivation
  
@@ -57,21 +57,37 @@ criteria such as urgency, resource intensity or deadline.
 </details>
 
 
+
+## Functional Block Diagram
+<details>
+  <summary>Detail</summary>  
+
+![image](https://github.com/user-attachments/assets/365aae2b-4dca-4482-81ff-16936b251e4b)
+
+</details>
+
 ## Working
 
 <details>
 
-<summary>Click to view</summary>
+<summary>Detail</summary>
 
-### Block Diagram
-![image](https://github.com/user-attachments/assets/365aae2b-4dca-4482-81ff-16936b251e4b)
+### working
+
+### functional table
+
+### flowchart
+
+
+
 </details>
+
 
 ## Logisim Circuit Diagram
 
 <details>
 
-<summary>Click to view</summary>
+<summary>Detail</summary>
   
 </details>
 
@@ -79,7 +95,7 @@ criteria such as urgency, resource intensity or deadline.
 
 <details>
 
-<summary>Click to view</summary>
+<summary>Detail</summary>
   
 ### Test bench File
 
@@ -88,6 +104,6 @@ criteria such as urgency, resource intensity or deadline.
 ## References
 <details>
 
-  <summary>Click to view</summary>
+  <summary>Detail</summary>
   
 </details>
