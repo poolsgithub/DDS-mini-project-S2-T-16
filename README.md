@@ -64,7 +64,7 @@ criteria such as urgency, resource intensity or deadline.
 <details>
   <summary>Detail</summary>  
 
-![block drawio](https://github.com/user-attachments/assets/13779907-88a6-47d2-bc06-8bb2979af70f)
+![block drawio](https://github.com/user-attachments/assets/505300f2-f6df-46f9-b7ed-101ff7f173af)
 
 
 </details>
