@@ -77,6 +77,102 @@ criteria such as urgency, resource intensity or deadline.
 
 ### working
 
+     Load Balancer Description
+ Dynamic Load Balancer is designed to distribute tasks efficiently across three servers based on their current
+ load. It receives an 8-bit input, where each bit represents a specific task, once a task is identified it compares
+ loads of the three servers and assigns the task to the least loaded server. After allocation it checks whether
+ any of the servers are approaching the predefined load threshold If one or more servers are nearing this
+ threshold, the load balancer generates a signal alerting the system to the increasing load. If all servers exceed
+ the threshold, an overload signal is triggered, indicating that no server can take more tasks without being
+ overburdened. The system operates continuously, processing tasks one by one and dynamically distributing
+ them to maintain load balance across the servers.
+ (a) Truth Table of Load Balancer
+    #### Key Components of the Load Balancer Design
+ 1. Priority Encoder (8-to-3):
+ • Function:
+ Converts an 8-bit input signal (representing tasks) into a 3-bit output signal. The 3-bit output indicates
+ the position of the highest-priority task (i.e., the first non-zero bit).
+ • Working:
+ The encoder checks each bit of the input from highest (bit 7) to lowest (bit 0). It outputs a 3-bit code
+ representing the index of the highest-priority bit that is set to ’1’.
+(b) Priority encoder Truth Table
+  Decoder (3-to-8):
+ • Function:
+ Takes the 3-bit input from the priority encoder and outputs an 8-bit signal, with one bit set to ’1’
+ representing the corresponding task position.
+ • Working:
+ The decoder maps the 3-bit input to a single active line in the 8-bit output. This active line represents
+ the task that will be processed, with all other tasks cleared.
+ (c) Decoder 3 to 8 Truth Table
+  Multiplexer:
+ • Function:
+ The Multiplexer (MUX) has several inputs and additional input called select lines and a single output
+ which is based on the select lines.
+ • Working:
+ The Multiplexer (MUX) selects one of several input signals and forwards the selected input into a
+ single output line based on the select lines which determines the qualities of the output.
+ (d) Multiplexer Truth Table
+  D Flip-Flop:
+ • Function:
+ A simple memory element used to store a bit value. It updates its output on the rising edge of the
+ clock or reset signal.
+• Working:
+ In this circuit, the D flip-flop is not explicitly used in the load balancer design, but it could be used
+ for task or state synchronization.
+  4-Bit Comparator:
+ • Function:
+ Compares two 4-bit inputs and outputs signal indicates whether inputs are equal or which input is
+ greater.
+ • Working:
+ The comparators in this circuit are used to compare the current load of the servers. They help identify
+ which server has the least number of tasks.
+ • Comparison Equation for server counts:
+ server1_least=(server1_count<=server2_count)(server1_count<=server3_count)
+ server2_least=(server2_count<=server3_count)(server2_count<server1_count)
+ server3_least=(server3_count<server1_count)(server3_count<server2_count)
+ (e) 4-bit comparator Truth Table
+  4-Bit Counter:
+ • Function:
+ Increments a 4-bit count on each clock cycle.
+ • Working:
+ When a clock is at positive edge then the counter increases by one unit
+ • Server Count Update:
+ 
+ HEX-Display:
+ • Function: HEX display is a type of 7-segment display designed to represent hexadecimal (base-16)
+ digits. It can display numbers from 0 to 9 and letters from A to F, which correspond to hexadecimal
+ digits.The hex display operates using binary inputs that are converted into hexadecimal output.
+#### Load balancing Module
+ Input Signals:
+ • Tasks: An 8-bit input representing available tasks.
+ • Clock and Reset: Clock and reset signals for synchronous operation.
+ Output Signals:
+ • HEX-display: HEX display’s are used for indicating the number of tasks assigned to a server.
+ • LED: LED’s are used to indicate the overload and trigger.
+ • Trigger: Signal indicating if any server’s task count exceeds a threshold.
+ • Overload: Signal indicating if all servers’ task counts exceed the threshold.
+ Internal Logic:
+ • Task Encoding: The Priority Encoder encodes the current task to a 3-bit code representing the
+ highest-priority task.
+ • Task Decoding: The Decoder decodes this 3-bit code to an 8-bit signal representing the remaining
+ tasks after processing the current one.
+ • Task Assignment: The output of the 3-Input 4-bit comparator we built , the server with the fewest
+ tasks receives the new task. The multiplexer is used to assign the corresponding server hence the task
+ counter is incremented.
+ • Task Update: The 8-Input Flip-Flop register updates to reflect the remaining tasks.
+ • Threshold Monitoring: The Comparator compares each server’s count with a threshold (set to 3).
+ If any server exceeds the threshold, the system triggers for rebalancing an LED is used to display it .
+ If all servers exceed the threshold, the system overloads a LED is used to display it.
+ #### Operation Flow
+ • Task Input: The input (8 bits) indicates which tasks are currently available.
+ • Priority Encoding: The priority encoder identifies the highest priority active task.
+ • Task Assignment: The decoder activates the corresponding task output, allowing the system to
+ determine which task is to be handled next.
+ • Load Tracking: The comparator compares the current load on each server. Then a multiplexer is
+ used to assign the task to the server with the least current load.
+ • Threshold Monitoring: If the load on any server exceeds a predefined threshold, the overload
+ signal is activated, allowing for potential scaling or alerting mechanisms.
+
 ### functional table
 
 ### flowchart
