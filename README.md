@@ -81,7 +81,7 @@ criteria such as urgency, resource intensity or deadline.
 
 ### flowchart
 
-![image](https://github.com/user-attachments/assets/365aae2b-4dca-4482-81ff-16936b251e4b)
+![dds_miniproject_flowchart](https://github.com/user-attachments/assets/b76f869f-9a38-40f9-a1ce-6bde3580e1c1)
 
 </details>
 
