@@ -98,6 +98,9 @@ criteria such as urgency, resource intensity or deadline.
 
 ![8-Input flip flop ](https://github.com/user-attachments/assets/ca8849b2-f49e-4251-802b-7bdd85dd3bb5)
 
+![3-Input 4-bit comparator ](https://github.com/user-attachments/assets/28bf059e-dcfb-48a0-a1cf-7f78662a216f)
+
+
   
 </details>
 
