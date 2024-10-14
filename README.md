@@ -129,6 +129,7 @@ criteria such as urgency, resource intensity or deadline.
  • Function:
  A simple memory element used to store a bit value. It updates its output on the rising edge of the
  clock or reset signal.
+ 
 • Working:
  In this circuit, the D flip-flop is not explicitly used in the load balancer design, but it could be used
  for task or state synchronization.
@@ -136,13 +137,19 @@ criteria such as urgency, resource intensity or deadline.
  • Function:
  Compares two 4-bit inputs and outputs signal indicates whether inputs are equal or which input is
  greater.
+ 
  • Working:
  The comparators in this circuit are used to compare the current load of the servers. They help identify
  which server has the least number of tasks.
+ 
  • Comparison Equation for server counts:
+ 
  server1_least=(server1_count<=server2_count)(server1_count<=server3_count)
+ 
  server2_least=(server2_count<=server3_count)(server2_count<server1_count)
- server3_least=(server3_count<server1_count)(server3_count<server2_count)
+ 
+ server3_least=(server3_count<server1_count)(server3_count<server2_count
+ 
 
 ![4-bit comp](https://github.com/user-attachments/assets/3776bd52-cf93-47ec-8c96-367949245a94)
 
