@@ -107,6 +107,9 @@ criteria such as urgency, resource intensity or deadline.
  • Working:
  The decoder maps the 3-bit input to a single active line in the 8-bit output. This active line represents
  the task that will be processed, with all other tasks cleared.
+
+ ![decoder](https://github.com/user-attachments/assets/1bd82847-305a-490c-80a1-73d795971b6f)
+
  (c) Decoder 3 to 8 Truth Table
  ##### Multiplexer:
  • Function:
