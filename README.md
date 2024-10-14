@@ -143,6 +143,9 @@ criteria such as urgency, resource intensity or deadline.
  server1_least=(server1_count<=server2_count)(server1_count<=server3_count)
  server2_least=(server2_count<=server3_count)(server2_count<server1_count)
  server3_least=(server3_count<server1_count)(server3_count<server2_count)
+
+![4-bit comp](https://github.com/user-attachments/assets/3776bd52-cf93-47ec-8c96-367949245a94)
+
  (e) 4-bit comparator Truth Table
  ##### 4-Bit Counter:
  • Function:
