@@ -77,7 +77,7 @@ criteria such as urgency, resource intensity or deadline.
 
 ### working
 
-     Load Balancer Description
+ ####  Load Balancer Description
  Dynamic Load Balancer is designed to distribute tasks efficiently across three servers based on their current
  load. It receives an 8-bit input, where each bit represents a specific task, once a task is identified it compares
  loads of the three servers and assigns the task to the least loaded server. After allocation it checks whether
@@ -87,8 +87,8 @@ criteria such as urgency, resource intensity or deadline.
  overburdened. The system operates continuously, processing tasks one by one and dynamically distributing
  them to maintain load balance across the servers.
  (a) Truth Table of Load Balancer
-    #### Key Components of the Load Balancer Design
- 1. Priority Encoder (8-to-3):
+  #### Key Components of the Load Balancer Design
+ ##### Priority Encoder (8-to-3):
  • Function:
  Converts an 8-bit input signal (representing tasks) into a 3-bit output signal. The 3-bit output indicates
  the position of the highest-priority task (i.e., the first non-zero bit).
@@ -96,7 +96,8 @@ criteria such as urgency, resource intensity or deadline.
  The encoder checks each bit of the input from highest (bit 7) to lowest (bit 0). It outputs a 3-bit code
  representing the index of the highest-priority bit that is set to ’1’.
 (b) Priority encoder Truth Table
-  Decoder (3-to-8):
+
+  ##### Decoder (3-to-8):
  • Function:
  Takes the 3-bit input from the priority encoder and outputs an 8-bit signal, with one bit set to ’1’
  representing the corresponding task position.
@@ -104,7 +105,7 @@ criteria such as urgency, resource intensity or deadline.
  The decoder maps the 3-bit input to a single active line in the 8-bit output. This active line represents
  the task that will be processed, with all other tasks cleared.
  (c) Decoder 3 to 8 Truth Table
-  Multiplexer:
+ ##### Multiplexer:
  • Function:
  The Multiplexer (MUX) has several inputs and additional input called select lines and a single output
  which is based on the select lines.
@@ -112,14 +113,14 @@ criteria such as urgency, resource intensity or deadline.
  The Multiplexer (MUX) selects one of several input signals and forwards the selected input into a
  single output line based on the select lines which determines the qualities of the output.
  (d) Multiplexer Truth Table
-  D Flip-Flop:
+ ##### D Flip-Flop:
  • Function:
  A simple memory element used to store a bit value. It updates its output on the rising edge of the
  clock or reset signal.
 • Working:
  In this circuit, the D flip-flop is not explicitly used in the load balancer design, but it could be used
  for task or state synchronization.
-  4-Bit Comparator:
+  ##### 4-Bit Comparator:
  • Function:
  Compares two 4-bit inputs and outputs signal indicates whether inputs are equal or which input is
  greater.
@@ -131,19 +132,19 @@ criteria such as urgency, resource intensity or deadline.
  server2_least=(server2_count<=server3_count)(server2_count<server1_count)
  server3_least=(server3_count<server1_count)(server3_count<server2_count)
  (e) 4-bit comparator Truth Table
-  4-Bit Counter:
+ ##### 4-Bit Counter:
  • Function:
  Increments a 4-bit count on each clock cycle.
  • Working:
  When a clock is at positive edge then the counter increases by one unit
  • Server Count Update:
  
- HEX-Display:
+##### HEX-Display:
  • Function: HEX display is a type of 7-segment display designed to represent hexadecimal (base-16)
  digits. It can display numbers from 0 to 9 and letters from A to F, which correspond to hexadecimal
  digits.The hex display operates using binary inputs that are converted into hexadecimal output.
 #### Load balancing Module
- Input Signals:
+ ##### Input Signals:
  • Tasks: An 8-bit input representing available tasks.
  • Clock and Reset: Clock and reset signals for synchronous operation.
  Output Signals:
