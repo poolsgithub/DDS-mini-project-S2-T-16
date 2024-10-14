@@ -124,7 +124,7 @@ criteria such as urgency, resource intensity or deadline.
 
  ![multiplexer](https://github.com/user-attachments/assets/041799ca-4433-4c58-a7b3-64344bb4e392)
 
- (d) Multiplexer Truth Table
+(d) Multiplexer Truth Table
  ##### D Flip-Flop:
  • Function:
  A simple memory element used to store a bit value. It updates its output on the rising edge of the
@@ -159,7 +159,11 @@ criteria such as urgency, resource intensity or deadline.
  Increments a 4-bit count on each clock cycle.
  • Working:
  When a clock is at positive edge then the counter increases by one unit
+ 
  • Server Count Update:
+
+ ![server](https://github.com/user-attachments/assets/61b1d390-d7ac-4175-a77b-39584d037de1)
+
  
 ##### HEX-Display:
  • Function: HEX display is a type of 7-segment display designed to represent hexadecimal (base-16)
