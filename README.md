@@ -75,7 +75,7 @@ criteria such as urgency, resource intensity or deadline.
 
 <summary>Detail</summary>
 
-### working
+### Working
 
  ####  Load Balancer Description
  Dynamic Load Balancer is designed to distribute tasks efficiently across three servers based on their current
@@ -216,9 +216,8 @@ criteria such as urgency, resource intensity or deadline.
  • Threshold Monitoring: If the load on any server exceeds a predefined threshold, the overload
  signal is activated, allowing for potential scaling or alerting mechanisms.
 
-### functional table
 
-### flowchart
+### Flowchart
 
 
 ![flowchart](https://github.com/user-attachments/assets/cf6bb252-001f-4627-a021-8c0b6b446b7e)
