@@ -98,6 +98,9 @@ criteria such as urgency, resource intensity or deadline.
  • Working:
  The encoder checks each bit of the input from highest (bit 7) to lowest (bit 0). It outputs a 3-bit code
  representing the index of the highest-priority bit that is set to ’1’.
+
+ ![priority](https://github.com/user-attachments/assets/61c136fe-c99c-4280-8bc4-404c98759d13)
+
 (b) Priority encoder Truth Table
 
   ##### Decoder (3-to-8):
