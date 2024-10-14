@@ -332,7 +332,6 @@ module comparator_4bit (
 );
 
 
-
 wire eq0, eq1, eq2, eq3;
 wire lt0, lt1, lt2, lt3;
 
