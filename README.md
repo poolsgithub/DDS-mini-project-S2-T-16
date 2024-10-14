@@ -93,6 +93,7 @@ criteria such as urgency, resource intensity or deadline.
 <details>
 
 <summary>Detail</summary>
+
 ![Main ](https://github.com/user-attachments/assets/25d033cf-1b90-44fc-a4ac-de58e834eb1c)
 
   
