@@ -86,6 +86,9 @@ criteria such as urgency, resource intensity or deadline.
  the threshold, an overload signal is triggered, indicating that no server can take more tasks without being
  overburdened. The system operates continuously, processing tasks one by one and dynamically distributing
  them to maintain load balance across the servers.
+
+ ![main](https://github.com/user-attachments/assets/cbaecf4f-cd7a-4c8b-b6c9-8c8193ffef83)
+
  (a) Truth Table of Load Balancer
   #### Key Components of the Load Balancer Design
  ##### Priority Encoder (8-to-3):
