@@ -121,6 +121,9 @@ criteria such as urgency, resource intensity or deadline.
  • Working:
  The Multiplexer (MUX) selects one of several input signals and forwards the selected input into a
  single output line based on the select lines which determines the qualities of the output.
+
+ ![multiplexer](https://github.com/user-attachments/assets/041799ca-4433-4c58-a7b3-64344bb4e392)
+
  (d) Multiplexer Truth Table
  ##### D Flip-Flop:
  • Function:
