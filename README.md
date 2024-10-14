@@ -326,43 +326,43 @@ endmodule
 
 
 module comparator_4bit (
-    input [3:0] a,
-    input [3:0] b,
-    output less_than
-);
-
-
-  wire eq0, eq1, eq2, eq3;
-  wire lt0, lt1, lt2, lt3;
-
-  wire eq01, eq012, eq0123;
-  wire lt01, lt012, lt0123;
-
-  xnor(eq0, a[0], b[0]);
-  xnor(eq1, a[1], b[1]);
-  xnor(eq2, a[2], b[2]);
-  xnor(eq3, a[3], b[3]);
-
-  and(lt0, ~a[0], b[0]);
-  and(lt1, ~a[1], b[1]);
-  and(lt2, ~a[2], b[2]);
-  and(lt3, ~a[3], b[3]);
-
-  and(eq01, eq0, eq1);
-  and(eq012, eq01, eq2);
-  and(eq0123, eq012, eq3);
-
-  wire eq1_and_lt0, eq2_and_lt01, eq3_and_lt012;
-  and(eq1_and_lt0, eq1, lt0);
-  or(lt01, lt1, eq1_and_lt0);
-
-  and(eq2_and_lt01, eq2, lt01);
-  or(lt012, lt2, eq2_and_lt01);
-
-  and(eq3_and_lt012, eq3, lt012);
-  or(lt0123, lt3, eq3_and_lt012);
-
-  assign less_than = lt0123;
+      input [3:0] a,
+      input [3:0] b,
+      output less_than
+  );
+  
+  
+    wire eq0, eq1, eq2, eq3;
+    wire lt0, lt1, lt2, lt3;
+  
+    wire eq01, eq012, eq0123;
+    wire lt01, lt012, lt0123;
+  
+    xnor(eq0, a[0], b[0]);
+    xnor(eq1, a[1], b[1]);
+    xnor(eq2, a[2], b[2]);
+    xnor(eq3, a[3], b[3]);
+  
+    and(lt0, ~a[0], b[0]);
+    and(lt1, ~a[1], b[1]);
+    and(lt2, ~a[2], b[2]);
+    and(lt3, ~a[3], b[3]);
+  
+    and(eq01, eq0, eq1);
+    and(eq012, eq01, eq2);
+    and(eq0123, eq012, eq3);
+  
+    wire eq1_and_lt0, eq2_and_lt01, eq3_and_lt012;
+    and(eq1_and_lt0, eq1, lt0);
+    or(lt01, lt1, eq1_and_lt0);
+  
+    and(eq2_and_lt01, eq2, lt01);
+    or(lt012, lt2, eq2_and_lt01);
+  
+    and(eq3_and_lt012, eq3, lt012);
+    or(lt0123, lt3, eq3_and_lt012);
+  
+    assign less_than = lt0123;
 
 endmodule
 
