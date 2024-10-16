@@ -625,8 +625,6 @@ This counter keeps track of the number of tasks assigned to each server. It incr
 
 ## References
 <details>
-  <summary>Click to view</summary>
-<details>
 
   <summary>References</summary>
   [Cardellini et al., 1999] Cardellini, V., Colajanni, M., and Yu, P. S. (1999). Dynamic load balancing on
@@ -642,4 +640,4 @@ https://kemptechnologies.com/load-balancer/load-balancing-algorithms-techniques/
 https://www.cloudflare.com/learning/performance/types-of-load-balancing-algorithms/  
   
   </details>
-</details>
+
