@@ -580,6 +580,7 @@ This counter keeps track of the number of tasks assigned to each server. It incr
 
 </details>
 
+<details>
 
  <summary>verilog_output</summary>
 
