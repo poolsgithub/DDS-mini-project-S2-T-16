@@ -246,7 +246,6 @@ criteria such as urgency, resource intensity or deadline.
 
 ## Verilog Code
 
-<details>
 
 <details>
 
