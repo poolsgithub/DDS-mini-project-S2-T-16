@@ -353,7 +353,8 @@ This module takes an 8-bit input representing tasks and outputs a 3-bit signal i
 
     endmodule
 
-
+#### Decoder (3-to-8):
+The decoder converts the 3-bit output from the priority encoder back into an 8-bit signal. This 8-bit signal activates the corresponding task output, ensuring that the correct task is assigned to the identified server.
 
     module decoder_3to8 (
     input [2:0] in,
@@ -377,7 +378,8 @@ This module takes an 8-bit input representing tasks and outputs a 3-bit signal i
 
     endmodule
 
-
+#### D Flip-Flop: 
+This flip-flop is used to store the current state of the task and updates the state on the rising edge of the clock. It ensures that the system correctly tracks which tasks are currently being processed.
 
     module d_flip_flop (
     input clk, reset, d,
@@ -393,7 +395,8 @@ This module takes an 8-bit input representing tasks and outputs a 3-bit signal i
     end
 
     endmodule
-
+#### 4-Bit Comparator: 
+The comparator is essential for comparing the task counts of the three servers. It determines which server has the least load and therefore should receive the next task. By continually comparing the loads, the system can make informed decisions on task distribution.
 
     module comparator_4bit (
       input [3:0] a,
@@ -436,7 +439,9 @@ This module takes an 8-bit input representing tasks and outputs a 3-bit signal i
 
     endmodule
 
+#### 2-Bit Counter: 
 
+This counter keeps track of the number of tasks assigned to each server. It increments its count on each clock cycle, allowing the load balancer to monitor the distribution of tasks accurately.
 
 
     module counter_2bit (
@@ -576,6 +581,7 @@ This module takes an 8-bit input representing tasks and outputs a 3-bit signal i
 </details>
 
 ## References
+
 <details>
 
   <summary>Detail</summary>
