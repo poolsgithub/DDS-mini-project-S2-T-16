@@ -585,5 +585,16 @@ This counter keeps track of the number of tasks assigned to each server. It incr
 <details>
 
   <summary>Detail</summary>
+  [Cardellini et al., 1999] Cardellini, V., Colajanni, M., and Yu, P. S. (1999). Dynamic load balancing on
+  web-server systems. IEEE Internet computing, 3(3):28–39.
   
 </details>
+<details>
+
+  <summary>links</summary>
+  
+https://www.geeksforgeeks.org/load-balancing-algorithms/
+https://kemptechnologies.com/load-balancer/load-balancing-algorithms-techniques
+https://www.cloudflare.com/learning/performance/types-of-load-balancing-algorithms/
+  
+  </details>
