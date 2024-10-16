@@ -230,7 +230,7 @@ criteria such as urgency, resource intensity or deadline.
 
 <details>
 
-<summary> circuits we built </summary>
+<summary> Circuits we built </summary>
 
 
 ![S2-T16](https://github.com/user-attachments/assets/fbabd67f-6a85-46a2-ba13-0e4d5a0a6395)
@@ -245,6 +245,8 @@ criteria such as urgency, resource intensity or deadline.
 </details>
 
 ## Verilog Code
+
+<details>
 
 <details>
 
@@ -589,6 +591,8 @@ This counter keeps track of the number of tasks assigned to each server. It incr
  ![outputs](https://github.com/user-attachments/assets/d7570b58-e32a-4a2e-9241-f970a2bfe7e0)
 
   </details>
+
+  <details>
 
 ## References
 
