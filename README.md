@@ -14,7 +14,7 @@
   > Member-1:	G. SANTHOSH BALAJI , 231CS224 , santhoshbalajig.231cs224@nitk.edu.in
 
 
-  > Member-2:	M. DATTATREYA LAXMI NARASIMHA , 231CS231 , manepallidattatreyalaxminarasimha.231cs231@nitk.edu.in
+  > Member-2:	M. DATTATREYA LAXMI NARASIMHA , 231CS231, manepallidattatreyalaxminarasimha.231cs231@nitk.edu.in
 
 
   > Member-3:	T. SAI NISHNATH RAO , 231CS260 , tungenasainishnathrao.231cs260@nitk.edu.in
