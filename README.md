@@ -3,7 +3,7 @@
 <!-- First Section -->
 ## Team Details
 <details> 
-  <summary>Detail</summary>
+  <summary>Meet us</summary>
 
   > Semester: 3rd Sem B. Tech. CSE
 
@@ -24,7 +24,7 @@
 <!-- Second Section -->
 ## Abstract
 <details>
-  <summary>Detail</summary>
+  <summary>See Our Abstract</summary>
   
  ### Motivation
  
@@ -62,7 +62,7 @@ criteria such as urgency, resource intensity or deadline.
 
 ## Functional Block Diagram
 <details>
-  <summary>Detail</summary>  
+  <summary>Click to view</summary>  
 
 
 ![dds](https://github.com/user-attachments/assets/120739ab-7096-4d4e-b12c-97c9306b10cf)
@@ -73,7 +73,7 @@ criteria such as urgency, resource intensity or deadline.
 
 <details>
 
-<summary>Detail</summary>
+<summary>Working is written Down(Always Click to see) </summary>
 
 ### Working
 
@@ -230,7 +230,7 @@ criteria such as urgency, resource intensity or deadline.
 
 <details>
 
-<summary>Detail</summary>
+<summary>the MVP lies under</summary>
 
 ![Main ](https://github.com/user-attachments/assets/25d033cf-1b90-44fc-a4ac-de58e834eb1c)
 
@@ -584,7 +584,7 @@ This counter keeps track of the number of tasks assigned to each server. It incr
 
 <details>
 
-  <summary>Detail</summary>
+  <summary>References</summary>
   [Cardellini et al., 1999] Cardellini, V., Colajanni, M., and Yu, P. S. (1999). Dynamic load balancing on
   web-server systems. IEEE Internet computing, 3(3):28–39.
   
@@ -593,8 +593,8 @@ This counter keeps track of the number of tasks assigned to each server. It incr
 
   <summary>links</summary>
   
-https://www.geeksforgeeks.org/load-balancing-algorithms/
-https://kemptechnologies.com/load-balancer/load-balancing-algorithms-techniques
-https://www.cloudflare.com/learning/performance/types-of-load-balancing-algorithms/
+https://www.geeksforgeeks.org/load-balancing-algorithms/  
+https://kemptechnologies.com/load-balancer/load-balancing-algorithms-techniques/  
+https://www.cloudflare.com/learning/performance/types-of-load-balancing-algorithms/  
   
   </details>
