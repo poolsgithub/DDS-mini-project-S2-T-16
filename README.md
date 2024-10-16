@@ -24,7 +24,7 @@
 <!-- Second Section -->
 ## Abstract
 <details>
-  <summary>See Our Abstract</summary>
+  <summary>See our Abstract</summary>
   
  ### Motivation
  
@@ -62,7 +62,7 @@ criteria such as urgency, resource intensity or deadline.
 
 ## Functional Block Diagram
 <details>
-  <summary>Click to view</summary>  
+  <summary>Block Diagram</summary>  
 
 
 ![dds](https://github.com/user-attachments/assets/120739ab-7096-4d4e-b12c-97c9306b10cf)
@@ -73,7 +73,7 @@ criteria such as urgency, resource intensity or deadline.
 
 <details>
 
-<summary> Working is Here (click) </summary>
+<summary>Working</summary>
 
 ### Working
 
@@ -230,7 +230,7 @@ criteria such as urgency, resource intensity or deadline.
 
 <details>
 
-<summary> Circuits we built </summary>
+<summary>Circuits we built</summary>
 
 
 ![S2-T16](https://github.com/user-attachments/assets/fbabd67f-6a85-46a2-ba13-0e4d5a0a6395)
@@ -274,7 +274,8 @@ from the three servers.
 
 ## Verilog Code
 <details>
-<summary>Click to view</summary>
+<summary>Verilog code</summary>  
+  
 <details>
 
 <summary>Gate-level</summary>
