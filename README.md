@@ -246,10 +246,12 @@ criteria such as urgency, resource intensity or deadline.
 
 ## Verilog Code
 <details>
+<summary>Click to view</summary>
+<details>
 
 <summary>Gate-level</summary>
 
-#### Load_balancer:
+#### Load balancer:
 
  The load balancer continuously monitors the task counts of each server. If any server's load exceeds a predefined threshold, the system generates an overload signal, indicating that the server is at capacity. This design enhances the efficiency and performance of the overall system, especially in dynamic computing environments where task loads fluctuate.
 
@@ -466,7 +468,7 @@ This counter keeps track of the number of tasks assigned to each server. It incr
 
 <details>
 
-<summary>Behaviourial_model</summary>
+<summary>Behaviourial model</summary>
 
 
     module load_balancer_behavioral (
@@ -535,7 +537,7 @@ This counter keeps track of the number of tasks assigned to each server. It incr
 
  <details>
 
-<summary>Test_bench</summary>
+<summary>Test bench</summary>
 
 
     module testbench;
@@ -584,16 +586,17 @@ This counter keeps track of the number of tasks assigned to each server. It incr
 
 <details>
 
- <summary>verilog_output</summary>
+ <summary>verilog output</summary>
 
  ![outputs](https://github.com/user-attachments/assets/d7570b58-e32a-4a2e-9241-f970a2bfe7e0)
 
   </details>
 
-  
+  </details>
 
 ## References
-
+<details>
+  <summary>Click to view</summary>
 <details>
 
   <summary>References</summary>
@@ -610,3 +613,4 @@ https://kemptechnologies.com/load-balancer/load-balancing-algorithms-techniques/
 https://www.cloudflare.com/learning/performance/types-of-load-balancing-algorithms/  
   
   </details>
+</details>
