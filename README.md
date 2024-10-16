@@ -73,7 +73,7 @@ criteria such as urgency, resource intensity or deadline.
 
 <details>
 
-<summary> Working is Under ⬇️ </summary>
+<summary> Working is Here (click) </summary>
 
 ### Working
 
