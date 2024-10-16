@@ -248,10 +248,10 @@ criteria such as urgency, resource intensity or deadline.
 
 <summary>Detail</summary>
 
-  module priority_encoder_8to3 (
+    module priority_encoder_8to3 (
     input [7:0] in,
     output [2:0] out
-);
+    );
 
     wire in_high, in_mid;
     wire in7_or_in6, in7_or_in6_or_in5, in7_or_in6_or_in5_or_in4, in3_or_in2, not_in6, not_in_high, not_in_mid;
@@ -280,14 +280,14 @@ criteria such as urgency, resource intensity or deadline.
     or (Y0_or_term, in[7], Y0_mid_term1, Y0_mid_term2);
     and (out[0], Y0_or_term);
 
-endmodule
+    endmodule
 
 
 
-module decoder_3to8 (
+    module decoder_3to8 (
     input [2:0] in,
     output [7:0] out
-);
+    );
 
     wire in0_inv, in1_inv, in2_inv;
 
@@ -304,14 +304,14 @@ module decoder_3to8 (
     and (out[6], in0_inv, in[1], in[2]);
     and (out[7], in[0], in[1], in[2]);
 
-endmodule
+    endmodule
 
 
 
-module d_flip_flop (
+    module d_flip_flop (
     input clk, reset, d,
     output reg q
-);
+    );
 
 
     always @(posedge clk or posedge reset) begin
@@ -321,14 +321,14 @@ module d_flip_flop (
             q <= d;
     end
 
-endmodule
+    endmodule
 
 
-module comparator_4bit (
+    module comparator_4bit (
       input [3:0] a,
       input [3:0] b,
       output less_than
-  );
+     );
   
   
     wire eq0, eq1, eq2, eq3;
@@ -363,15 +363,15 @@ module comparator_4bit (
   
     assign less_than = lt0123;
 
-endmodule
+    endmodule
 
 
 
 
-module counter_2bit (
+    module counter_2bit (
     input clk, reset,
     output reg [1:0] count
-);
+    );
 
 
     always @(posedge clk or posedge reset) begin
@@ -380,16 +380,16 @@ module counter_2bit (
         else
             count <= count + 1;
     end
-endmodule
+    endmodule
 
 
-module load_balancer_gate_level (
+    module load_balancer_gate_level (
     input [7:0] tasks,
     input clk, reset,
     output reg [3:0] server1_count, server2_count, server3_count,
     output trigger,
     output overload
-);
+    );
 
     wire [2:0] priority_task;
     wire [7:0] remaining_tasks;
@@ -443,9 +443,10 @@ module load_balancer_gate_level (
     or(trigger,server1_threshold,server2_threshold,server3_threshold);
     and(overload,server1_threshold,server2_threshold,server3_threshold);
 
-endmodule
+    endmodule
 #### behavioral model
-module load_balancer_behavioral (
+
+    module load_balancer_behavioral (
     input [7:0] tasks,
     input clk,
     input reset,
@@ -454,7 +455,7 @@ module load_balancer_behavioral (
     output reg [3:0] server1_count,
     output reg trigger,
     output reg overload
-);
+    );
 
     reg [3:0] server_load [0:2];
     integer i;
@@ -505,11 +506,11 @@ module load_balancer_behavioral (
             overload <= 1'b0;
         end
     end
-endmodule
+    endmodule
 
 ### Test bench File
 
-module testbench;
+    module testbench;
 
     reg [7:0] tasks;
     reg clk, reset;
@@ -550,7 +551,7 @@ module testbench;
         $monitor("Time: %0d || Server3: %d || Server2: %d || Server1: %d || trigger: %b || overload: %b ", $time, server1_count, server2_count, server3_count, trigger, overload);
     end
     
-endmodule
+    endmodule
 
 </details>
 
