@@ -246,7 +246,78 @@ criteria such as urgency, resource intensity or deadline.
 
 <details>
 
-<summary>Detail</summary>
+<summary>Gate-level</summary>
+
+#### Load_balancer:
+
+ The load balancer continuously monitors the task counts of each server. If any server's load exceeds a predefined threshold, the system generates an overload signal, indicating that the server is at capacity. This design enhances the efficiency and performance of the overall system, especially in dynamic computing environments where task loads fluctuate.
+
+ 
+    module load_balancer_gate_level (
+    input [7:0] tasks,
+    input clk, reset,
+    output reg [3:0] server1_count, server2_count, server3_count,
+    output trigger,
+    output overload
+    );
+
+    wire [2:0] priority_task;
+    wire [7:0] remaining_tasks;
+    reg [7:0] tasks_reg;
+    
+    wire server1_least, server2_least, server3_least;
+
+    
+    priority_encoder_8to3 encoder(.in(tasks_reg), .out(priority_task));
+
+    
+    decoder_3to8 decoder(.in(priority_task), .out(remaining_tasks));
+
+    
+    always @(posedge clk or posedge reset) begin
+        if (reset)
+            tasks_reg <= tasks;
+        else if (tasks_reg != 0)
+            tasks_reg <= remaining_tasks;
+    end
+
+   
+    comparator_4bit comp1(.a(server1_count), .b(server2_count), .less_than(server1_least));
+    comparator_4bit comp2(.a(server2_count), .b(server3_count), .less_than(server2_least));
+    comparator_4bit comp3(.a(server3_count), .b(server1_count), .less_than(server3_least));
+
+    
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            server1_count <= 0;
+            server2_count <= 0;
+            server3_count <= 0;
+        end
+        else if (tasks_reg != 0) begin
+            if (server1_least) 
+                server1_count <= server1_count + 1;
+            else if (server2_least) 
+                server2_count <= server2_count + 1;
+            else 
+                server3_count <= server3_count + 1;
+        end
+    end
+
+    reg [3:0]threshold = 4'b0011;
+    wire server1_threshold, server2_threshold, server3_threshold;
+
+    comparator_4bit thre1(.a(threshold), .b(server1_count), .less_than(server1_threshold));
+    comparator_4bit thre2(.a(threshold), .b(server2_count), .less_than(server2_threshold));
+    comparator_4bit thre3(.a(threshold), .b(server3_count), .less_than(server3_threshold));
+
+    or(trigger,server1_threshold,server2_threshold,server3_threshold);
+    and(overload,server1_threshold,server2_threshold,server3_threshold);
+
+    endmodule
+
+#### Priority Encoder (8-to-3):
+This module takes an 8-bit input representing tasks and outputs a 3-bit signal indicating the highest priority task. The highest bit represents the task that should be assigned first based on the current load.
+
 
     module priority_encoder_8to3 (
     input [7:0] in,
@@ -383,68 +454,14 @@ criteria such as urgency, resource intensity or deadline.
     endmodule
 
 
-    module load_balancer_gate_level (
-    input [7:0] tasks,
-    input clk, reset,
-    output reg [3:0] server1_count, server2_count, server3_count,
-    output trigger,
-    output overload
-    );
-
-    wire [2:0] priority_task;
-    wire [7:0] remaining_tasks;
-    reg [7:0] tasks_reg;
-    
-    wire server1_least, server2_least, server3_least;
-
-    
-    priority_encoder_8to3 encoder(.in(tasks_reg), .out(priority_task));
-
-    
-    decoder_3to8 decoder(.in(priority_task), .out(remaining_tasks));
-
-    
-    always @(posedge clk or posedge reset) begin
-        if (reset)
-            tasks_reg <= tasks;
-        else if (tasks_reg != 0)
-            tasks_reg <= remaining_tasks;
-    end
-
    
-    comparator_4bit comp1(.a(server1_count), .b(server2_count), .less_than(server1_least));
-    comparator_4bit comp2(.a(server2_count), .b(server3_count), .less_than(server2_least));
-    comparator_4bit comp3(.a(server3_count), .b(server1_count), .less_than(server3_least));
-
+    </details>
     
-    always @(posedge clk or posedge reset) begin
-        if (reset) begin
-            server1_count <= 0;
-            server2_count <= 0;
-            server3_count <= 0;
-        end
-        else if (tasks_reg != 0) begin
-            if (server1_least) 
-                server1_count <= server1_count + 1;
-            else if (server2_least) 
-                server2_count <= server2_count + 1;
-            else 
-                server3_count <= server3_count + 1;
-        end
-    end
 
-    reg [3:0]threshold = 4'b0011;
-    wire server1_threshold, server2_threshold, server3_threshold;
+<details>
 
-    comparator_4bit thre1(.a(threshold), .b(server1_count), .less_than(server1_threshold));
-    comparator_4bit thre2(.a(threshold), .b(server2_count), .less_than(server2_threshold));
-    comparator_4bit thre3(.a(threshold), .b(server3_count), .less_than(server3_threshold));
+<summary>Behaviourial_model</summary>
 
-    or(trigger,server1_threshold,server2_threshold,server3_threshold);
-    and(overload,server1_threshold,server2_threshold,server3_threshold);
-
-    endmodule
-#### behavioral model
 
     module load_balancer_behavioral (
     input [7:0] tasks,
@@ -507,11 +524,14 @@ criteria such as urgency, resource intensity or deadline.
         end
     end
     endmodule
+</details>
 
-### Test bench File
+<details>
+
+<summary>Test_bench</summary>
+
 
     module testbench;
-
     reg [7:0] tasks;
     reg clk, reset;
     wire [3:0] server1_count, server2_count, server3_count;
