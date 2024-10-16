@@ -73,7 +73,7 @@ criteria such as urgency, resource intensity or deadline.
 
 <details>
 
-<summary>Working is written Down(Always Click to see) </summary>
+<summary> Working is Under ⬇️ </summary>
 
 ### Working
 
@@ -230,7 +230,7 @@ criteria such as urgency, resource intensity or deadline.
 
 <details>
 
-<summary>the MVP lies under</summary>
+<summary> The most Important is Here ⬇️</summary>
 
 ![Main ](https://github.com/user-attachments/assets/25d033cf-1b90-44fc-a4ac-de58e834eb1c)
 
