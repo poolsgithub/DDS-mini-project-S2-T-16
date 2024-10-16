@@ -245,8 +245,6 @@ criteria such as urgency, resource intensity or deadline.
 </details>
 
 ## Verilog Code
-
-
 <details>
 
 <summary>Gate-level</summary>
@@ -532,8 +530,10 @@ This counter keeps track of the number of tasks assigned to each server. It incr
         end
     end
     endmodule
+    
 </details>
 
+ <details>
 
 <summary>Test_bench</summary>
 
@@ -590,7 +590,7 @@ This counter keeps track of the number of tasks assigned to each server. It incr
 
   </details>
 
-  <details>
+  
 
 ## References
 
