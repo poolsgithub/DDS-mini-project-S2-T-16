@@ -234,13 +234,41 @@ criteria such as urgency, resource intensity or deadline.
 
 
 ![S2-T16](https://github.com/user-attachments/assets/fbabd67f-6a85-46a2-ba13-0e4d5a0a6395)
-
+• The Dynamic Load Balancer Circuit dynamically allocates tasks to three servers based on their load,
+ensuring even distribution.  
+• The main components and their functionality are as follows:  
+• Task Input Queue: Tasks are queued up here, ready to be assigned to one of the servers.  
+• Load Comparator and Logic Gates: These components monitor the current load on each server and
+compare them. As they are decribed below.  
+• Servers (S1, S2, S3): Three servers handle tasks, each with a load counter.  
+• Display Indicators:  
+– Red Display indicates tasks assigned to Server-1.  
+– Blue Display indicates tasks assigned to Server-2.  
+– Pink Display indicates tasks assigned to Server-3.  
+• Overload Detection: An overload LED lights up if any server reaches the load threshold.  
+• Rebalancing Trigger: If a server is overloaded, load rebalancing is triggered.  
+• Control Signals: Clock pulse to assign tasks. Reset button to reset the circuit.  
 
 ![8-Input flip flop ](https://github.com/user-attachments/assets/ca8849b2-f49e-4251-802b-7bdd85dd3bb5)
 
+The 8-input Flip-Flop circuit is designed to store 8 bits of data at a time.  
+Working:  
+• Inputs: There are 8 input lines, along with a clock (clk) and a clear.  
+• The clear button resets the flip-flops when set to 1.  
+• Flip-Flops: The 8 individual flip-flops store each bit of the input.Each flip-flop has an clear button
+and a output (Q).  
+• Output: The stored 8-bit data is provided as output with 8-bits  
+
 ![3-Input 4-bit comparator ](https://github.com/user-attachments/assets/28bf059e-dcfb-48a0-a1cf-7f78662a216f)
 
-
+The 3-input, 4-bit comparator is designed to compare the counters of three servers (Server-1, Server-2, and
+Server-3). Each server provides a 4-bit input, which represents its current load or task count.  
+Working:  
+• Inputs: The 4-bit counters from each server are fed into the comparator.  
+• Logic Gates: The comparator uses a combination of AND, OR, and NOT gates to compare the inputs
+from the three servers.  
+• The logic gates process the inputs to determine which server has the smallest count.  
+• Outputs: After comparison, three outputs are generated for each server the server with least connections in high and remaining are low.  
   
 </details>
 
