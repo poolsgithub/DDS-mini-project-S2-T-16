@@ -579,6 +579,8 @@ This counter keeps track of the number of tasks assigned to each server. It incr
     endmodule
 
 </details>
+ <summary>verilog_output</summary>
+  </details>
 
 ## References
 
