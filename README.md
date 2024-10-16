@@ -230,9 +230,11 @@ criteria such as urgency, resource intensity or deadline.
 
 <details>
 
-<summary> The most Important is Here ⬇️</summary>
+<summary> circuits we build </summary>
 
-![Main ](https://github.com/user-attachments/assets/25d033cf-1b90-44fc-a4ac-de58e834eb1c)
+
+![S2-T16](https://github.com/user-attachments/assets/fbabd67f-6a85-46a2-ba13-0e4d5a0a6395)
+
 
 ![8-Input flip flop ](https://github.com/user-attachments/assets/ca8849b2-f49e-4251-802b-7bdd85dd3bb5)
 
