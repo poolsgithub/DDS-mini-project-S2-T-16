@@ -230,7 +230,7 @@ criteria such as urgency, resource intensity or deadline.
 
 <details>
 
-<summary> circuits we build </summary>
+<summary> circuits we built </summary>
 
 
 ![S2-T16](https://github.com/user-attachments/assets/fbabd67f-6a85-46a2-ba13-0e4d5a0a6395)
