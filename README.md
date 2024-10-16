@@ -535,7 +535,6 @@ This counter keeps track of the number of tasks assigned to each server. It incr
     endmodule
 </details>
 
-<details>
 
 <summary>Test_bench</summary>
 
