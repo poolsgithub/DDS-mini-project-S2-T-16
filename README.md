@@ -685,7 +685,7 @@ This counter keeps track of the number of tasks assigned to each server. It incr
 
 ## Hardware Implementatiom
 <details>
-  <summary>See Our Hardware</summary>
+  <summary>Hardware Hub</summary>
 
   
 In this project, we aim to design a dynamic load balancer circuit using fundamental digital components.
