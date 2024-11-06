@@ -220,6 +220,7 @@ criteria such as urgency, resource intensity or deadline.
 ### Flowchart
 
 
+
 ![flowchart](https://github.com/user-attachments/assets/cf6bb252-001f-4627-a021-8c0b6b446b7e)
 
 
@@ -681,6 +682,90 @@ This counter keeps track of the number of tasks assigned to each server. It incr
   </details>
 
   </details>
+
+## Hardware Implementatiom
+<details>
+  <summary>click to see</summary>
+
+  
+In this project, we aim to design a dynamic load balancer circuit using fundamental digital components.
+The initial design was intended to distribute tasks across three servers by dynamically assessing and
+balancing the load. However, due to the complexity involved, we have scaled the design down to
+manage load balancing across two servers.
+  
+### Componenents Used:
+  • Parallel In Parallel Out (PIPO) register
+  
+  • D-flip flops
+  
+  • comparators
+  
+  • 4-bit binary counters
+  
+  • and gates
+  
+  • not gates
+  
+### Design Components and Functionality:
+
+1. Parallel-in Parallel-out (PIPO) Register:
+The PIPO register is used to capture and hold load information for both servers simultaneously. This
+allows parallel input and output of the load values for Server 1 and Server 2, enabling immediate
+availability of load values for comparison and routing.
+
+2. D-Flip Flops:
+D-flip flops are incorporated for temporary data storage and to ensure stable control signals. They
+store the comparator results and provide a synchronized output signal that directs tasks to the correct
+server.
+
+2. Comparators:
+A single comparator is employed to evaluate the load levels between the two servers. The comparator
+checks if the load on Server 1 is less than or equal to the load on Server 2, outputting a control signal
+based on this evaluation.
+
+4. 4-Bit Binary Counters:
+Each server is equipped with a 4-bit binary counter to track its current load level. These counters
+increment with each task assigned to the server, allowing the system to keep a dynamic record of
+workload distribution.
+
+6. AND Gates:
+AND gates are used to control the task-routing logic. They help direct the tasks to the correct server
+based on the output of the comparator and the state of the D-flip flops, ensuring that tasks are assigned
+only when specific conditions are met.
+
+8. NOT Gates:
+NOT gates are utilized to invert signals within the control logic. For example, when directing tasks to
+a server with a lower load, a NOT gate may be used to ensure that the selection signal is appropriately
+adjusted to block tasks from routing to a fully loaded server.
+
+
+### Circuit Operation:
+
+1. Load Capture and Comparison:
+The load levels for Server 1 and Server 2 are captured by the PIPO register and outputted to the
+comparator. The comparator evaluates the load levels and generates a control signal based on which
+server has the lower or equal load level.
+
+3. Task Routing:
+The control signal from the comparator is sent to the D-flip flops, which stabilize the output to the
+routing control logic. The output from the D-flip flops, in combination with AND gates, controls a
+2-to-1 multiplexer that directs incoming tasks to the server with the lower load.
+
+5. Load Tracking and Updating:
+Once a task is routed to a server, its corresponding 4-bit binary counter increments to reflect the
+new load level. This updated load level is captured by the PIPO register on the next cycle, allowing
+continuous monitoring and balancing of workloads.
+
+### Final Working:
+
+This two-server dynamic load balancer circuit leverages the PIPO register, D-flip flops, a comparator,
+4-bit binary counters, and basic logic gates to manage and distribute tasks dynamically based on load
+levels. This design provides a foundational approach for load balancing, which can be extended or
+modified to accommodate additional servers in future iterations.
+
+
+  
+</details>
 
 ## References
 <details>
