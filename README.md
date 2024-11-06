@@ -225,6 +225,65 @@ criteria such as urgency, resource intensity or deadline.
 
 </details>
 
+## Design
+<details>
+  <summary>design of our project</summary>
+  
+  ### Load balancing Module
+  
+ ##### Input Signals:
+ • Tasks: An 8-bit input representing available tasks.
+ 
+ • Clock and Reset: Clock and reset signals for synchronous operation.
+ 
+##### Output Signals:
+ • HEX-display: HEX display’s are used for indicating the number of tasks assigned to a server.
+ 
+ • LED: LED’s are used to indicate the overload and trigger.
+ 
+ • Trigger: Signal indicating if any server’s task count exceeds a threshold.
+ 
+ • Overload: Signal indicating if all servers’ task counts exceed the threshold.
+ 
+ ##### Internal Logic:
+ • Task Encoding: The Priority Encoder encodes the current task to a 3-bit code representing the
+ highest-priority task.
+ 
+ • Task Decoding: The Decoder decodes this 3-bit code to an 8-bit signal representing the remaining
+ tasks after processing the current one.
+ 
+ • Task Assignment: The output of the 3-Input 4-bit comparator we built , the server with the fewest
+ tasks receives the new task. The multiplexer is used to assign the corresponding server hence the task
+ counter is incremented.
+ 
+ • Task Update: The 8-Input Flip-Flop register updates to reflect the remaining tasks.
+ 
+ • Threshold Monitoring: The Comparator compares each server’s count with a threshold (set to 3).
+ 
+ If any server exceeds the threshold, the system triggers for rebalancing an LED is used to display it .
+ 
+ If all servers exceed the threshold, the system overloads a LED is used to display it.
+ ### Operation Flow
+ • Task Input: The input (8 bits) indicates which tasks are currently available.
+ 
+ • Priority Encoding: The priority encoder identifies the highest priority active task.
+ 
+ • Task Assignment: The decoder activates the corresponding task output, allowing the system to
+ determine which task is to be handled next.
+ 
+ • Load Tracking: The comparator compares the current load on each server. Then a multiplexer is
+ used to assign the task to the server with the least current load.
+ 
+ • Threshold Monitoring: If the load on any server exceeds a predefined threshold, the overload
+ signal is activated, allowing for potential scaling or alerting mechanisms.
+
+
+### Flowchart
+
+
+![flowchart](https://github.com/user-attachments/assets/cf6bb252-001f-4627-a021-8c0b6b446b7e)
+</details>
+
 
 ## Logisim Circuit Diagram
 
